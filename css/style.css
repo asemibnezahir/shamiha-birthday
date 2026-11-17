@@ -1,0 +1,1718 @@
+/* =========================================
+   SHAMIHA - BIRTHDAY SURPRISE WEBSITE
+   Main Stylesheet
+========================================= */
+
+
+/* =========================================
+   1. GOOGLE FONT & ROOT VARIABLES
+========================================= */
+
+:root {
+    --primary-pink: #ff4f91;
+    --light-pink: #ffb6d5;
+    --soft-pink: #ffe4ef;
+    --dark-pink: #e93679;
+
+    --white: #ffffff;
+    --cream: #fff9fc;
+
+    --text-dark: #63334a;
+    --text-light: #a56b83;
+
+    --shadow:
+        0 15px 45px rgba(214, 62, 124, 0.18);
+
+    --card-radius: 24px;
+}
+
+
+/* =========================================
+   2. GLOBAL RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================================
+   GLOBAL BODY FIX
+========================================= */
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: 'Poppins', 'Hind Siliguri', sans-serif;
+
+    overflow-x: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.82),
+            rgba(255, 182, 213, 0.75)
+        ),
+        url("../assets/images/background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    /* IMPORTANT FIX */
+    display: block;
+
+    position: relative;
+}
+
+
+/* =========================================
+   3. MAIN CONTAINER
+========================================= */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    padding: 30px 15px;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   4. MAIN BIRTHDAY CARD
+========================================= */
+
+.boxcontainer {
+    width: 700px;
+    height: 450px;
+
+    max-width: 95vw;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: var(--card-radius);
+
+    background:
+        radial-gradient(
+            circle at center,
+            #ffffff 0%,
+            #ffe4f0 55%,
+            #ffc5df 100%
+        );
+
+    box-shadow:
+        0 20px 60px rgba(220, 65, 130, 0.20),
+        inset 0 0 30px rgba(255, 255, 255, 0.8);
+
+    border: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+
+/* =========================================
+   5. BIRTHDAY BANNER
+========================================= */
+
+.image {
+    width: 100%;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+
+    z-index: 2;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =========================================
+   6. HAPPY BIRTHDAY TEXT
+========================================= */
+
+.text-happybirthday {
+    width: 100%;
+
+    position: absolute;
+
+    top: 65px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 3;
+}
+
+.text-happybirthday img {
+    width: 80%;
+    max-width: 420px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   7. BIRTHDAY CAKE
+========================================= */
+
+.cake {
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    bottom: 35px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: transparent;
+
+    border: none;
+
+    cursor: pointer;
+
+    z-index: 8;
+
+    transition: transform 0.35s ease;
+}
+
+.cake img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+.cake:hover img {
+    transform: scale(1.12);
+
+    filter:
+        drop-shadow(0 8px 15px rgba(255, 65, 135, 0.35));
+}
+
+.cake:active img {
+    transform: scale(0.95);
+}
+
+
+/* =========================================
+   8. BALLOONS
+========================================= */
+
+.box-balloon {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+
+    z-index: 4;
+}
+
+.balloon-item1 {
+    width: 85px;
+
+    position: absolute;
+
+    top: 115px;
+}
+
+.balloon-item1:nth-child(1) {
+    left: 35px;
+}
+
+.balloon-item1:nth-child(2) {
+    right: 35px;
+}
+
+.balloon-item1 img {
+    width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   9. CLOUDS
+========================================= */
+
+.box-cloud {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.cloud {
+    width: 110px;
+
+    position: absolute;
+
+    top: 190px;
+}
+
+.cloud:nth-child(1) {
+    left: 65px;
+}
+
+.cloud:nth-child(2) {
+    right: 65px;
+}
+
+.cloud img {
+    width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   10. FIREWORKS
+========================================= */
+
+.box-firework {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+
+    z-index: 5;
+}
+
+.firework {
+    position: absolute;
+
+    width: 90px;
+}
+
+.firework:nth-child(1) {
+    top: 100px;
+    left: 150px;
+}
+
+.firework:nth-child(2) {
+    top: 100px;
+    right: 150px;
+}
+
+.firework img {
+    width: 100%;
+
+    position: absolute;
+
+    object-fit: contain;
+}
+
+.firework img:nth-child(2) {
+    opacity: 0;
+}
+
+
+/* =========================================
+   11. PAPER CANNONS
+========================================= */
+
+.paperCannons {
+    width: 100%;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+
+    pointer-events: none;
+
+    z-index: 6;
+}
+
+.paperCannons img {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   12. GIFT BOXES
+========================================= */
+
+.box-giftbox {
+    width: 100%;
+
+    position: absolute;
+
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+
+    padding: 0 15px;
+
+    z-index: 7;
+}
+
+.box-giftbox img {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+}
+
+.box-giftbox img:hover {
+    transform: translateY(-12px) scale(1.15);
+
+    filter:
+        drop-shadow(0 5px 10px rgba(255, 65, 135, 0.3));
+}
+
+
+/* =========================================
+   13. CUTE CHARACTERS
+========================================= */
+
+.boxcute {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+
+    z-index: 8;
+}
+
+.cute1,
+.cute2 {
+    width: 105px;
+
+    position: absolute;
+
+    bottom: 10px;
+}
+
+.cute1 {
+    left: 15px;
+}
+
+.cute2 {
+    right: 15px;
+}
+
+.boxcute img {
+    width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   14. ENVELOPE BUTTON
+========================================= */
+
+.mail {
+    width: 65px;
+    height: 65px;
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 20px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid rgba(255, 255, 255, 0.9);
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff79ae,
+            #ff3f88
+        );
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(255, 63, 136, 0.35);
+
+    z-index: 15;
+
+    transition: all 0.35s ease;
+}
+
+.mail:hover {
+    transform: translateX(-50%) scale(1.12);
+
+    box-shadow:
+        0 12px 30px rgba(255, 63, 136, 0.45);
+}
+
+.mail:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+
+/* =========================================
+   15. BIRTHDAY LETTER OVERLAY
+========================================= */
+
+.boxMail {
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    background: rgba(39, 8, 28, 0.88);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: scale(0.95);
+
+    transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease,
+        transform 0.5s ease;
+
+    z-index: 1000;
+}
+
+.boxMail.active {
+    opacity: 1;
+    visibility: visible;
+
+    transform: scale(1);
+}
+
+
+/* =========================================
+   16. LETTER CLOSE BUTTON
+========================================= */
+
+.close-letter {
+    width: 45px;
+    height: 45px;
+
+    position: absolute;
+
+    top: 25px;
+    right: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: var(--dark-pink);
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
+    z-index: 1002;
+}
+
+.close-letter:hover {
+    transform: rotate(90deg);
+
+    background: var(--soft-pink);
+}
+
+
+/* =========================================
+   17. LETTER CONTAINER
+========================================= */
+
+.boxMail-container {
+    width: 850px;
+    max-width: 95%;
+
+    height: 500px;
+    max-height: 80vh;
+
+    position: relative;
+
+    display: flex;
+
+    perspective: 1500px;
+}
+
+
+/* =========================================
+   18. LETTER LEFT COVER
+========================================= */
+
+.card1 {
+    width: 50%;
+    height: 100%;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffb6d5,
+            #ff6cae
+        );
+
+    border-radius: 15px 0 0 15px;
+
+    border: 3px solid white;
+
+    transform-origin: left center;
+
+    transform-style: preserve-3d;
+
+    backface-visibility: hidden;
+
+    z-index: 2;
+
+    box-shadow: var(--shadow);
+}
+
+.card1 h3 {
+    margin-top: 20px;
+
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 36px;
+
+    font-weight: 700;
+
+    color: white;
+
+    text-align: center;
+}
+
+.userImg {
+    width: 190px;
+    height: 190px;
+
+    overflow: hidden;
+
+    border: 6px solid white;
+    border-radius: 50%;
+
+    box-shadow:
+        0 8px 25px rgba(160, 42, 92, 0.25),
+        0 0 20px rgba(255, 255, 255, 0.35);
+}
+
+.userImg img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 32%;
+
+    display: block;
+}
+
+.imageCute {
+    width: 100px;
+
+    margin-top: 20px;
+}
+
+.imageCute img {
+    width: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   19. LETTER RIGHT CONTENT
+========================================= */
+
+.card2 {
+    width: 50%;
+    height: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--cream);
+
+    border: 3px solid white;
+
+    border-left: none;
+
+    border-radius: 0 15px 15px 0;
+
+    box-shadow: var(--shadow);
+
+    z-index: 1;
+}
+
+.card2-content {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    padding: 35px 30px;
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        var(--light-pink)
+        transparent;
+}
+
+.card2-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.card2-content::-webkit-scrollbar-thumb {
+    background: var(--light-pink);
+
+    border-radius: 10px;
+}
+
+.card2-content h3 {
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 34px;
+
+    color: var(--primary-pink);
+
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.card2-content h2 {
+    font-family: 'Hind Siliguri', sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    line-height: 1.9;
+
+    white-space: pre-line;
+
+    color: var(--text-dark);
+
+    text-align: left;
+}
+
+.imageCute2 {
+    width: 100px;
+
+    margin: 25px auto 0;
+}
+
+.imageCute2 img {
+    width: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   20. FINAL BIRTHDAY SURPRISE
+========================================= */
+
+.birthday-surprise {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #57112f,
+            #170512
+        );
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: scale(0.95);
+
+    transition:
+        opacity 0.7s ease,
+        visibility 0.7s ease,
+        transform 0.7s ease;
+
+    z-index: 2000;
+}
+
+.birthday-surprise.active {
+    opacity: 1;
+    visibility: visible;
+
+    transform: scale(1);
+}
+
+.surprise-content {
+    width: 100%;
+    max-width: 750px;
+
+    text-align: center;
+
+    color: white;
+}
+
+.surprise-content h1 {
+    font-family: 'Dancing Script', cursive;
+
+    font-size: clamp(42px, 7vw, 75px);
+
+    line-height: 1.4;
+
+    color: #ff8db8;
+
+    text-shadow:
+        0 0 15px rgba(255, 80, 150, 0.8),
+        0 0 35px rgba(255, 80, 150, 0.5);
+}
+
+.surprise-content h1 span {
+    display: block;
+
+    color: white;
+}
+
+.surprise-content p {
+    margin-top: 25px;
+
+    font-family: 'Hind Siliguri', sans-serif;
+
+    font-size: 21px;
+
+    line-height: 1.9;
+
+    color: #ffe1ed;
+}
+
+.surprise-heart {
+    width: 100px;
+    height: 100px;
+
+    margin: 35px auto;
+}
+
+.surprise-heart img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+#closeSurprise {
+    padding: 14px 28px;
+
+    border: 2px solid white;
+
+    border-radius: 50px;
+
+    background: var(--primary-pink);
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+#closeSurprise:hover {
+    background: white;
+
+    color: var(--dark-pink);
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+   21. FOOTER
+========================================= */
+
+#copy {
+    position: fixed;
+
+    bottom: 12px;
+
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    z-index: 10;
+
+    pointer-events: none;
+}
+
+#copy p {
+    font-size: 12px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 2px 5px rgba(100, 20, 60, 0.4);
+}
+
+#copy i {
+    color: #ff3f88;
+
+    margin: 0 3px;
+}
+
+
+/* =========================================
+   22. ACCESSIBILITY
+========================================= */
+
+button:focus-visible {
+    outline: 3px solid white;
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   23. RESPONSIVE DESIGN - TABLET
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .boxcontainer {
+        width: 95vw;
+
+        height: 430px;
+    }
+
+    .text-happybirthday {
+        top: 75px;
+    }
+
+    .text-happybirthday img {
+        width: 75%;
+    }
+
+    .balloon-item1 {
+        width: 65px;
+    }
+
+    .balloon-item1:nth-child(1) {
+        left: 15px;
+    }
+
+    .balloon-item1:nth-child(2) {
+        right: 15px;
+    }
+
+    .cloud {
+        width: 80px;
+    }
+
+    .firework {
+        width: 65px;
+    }
+
+    .cake {
+        width: 145px;
+        height: 145px;
+    }
+
+    .box-giftbox img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .cute1,
+    .cute2 {
+        width: 80px;
+    }
+
+    .boxMail-container {
+        height: 450px;
+    }
+
+    .card1 h3 {
+        font-size: 28px;
+    }
+
+    .userImg {
+        width: 130px;
+        height: 130px;
+    }
+
+    .card2-content {
+        padding: 25px 20px;
+    }
+
+    .card2-content h3 {
+        font-size: 28px;
+    }
+
+    .card2-content h2 {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================
+   24. RESPONSIVE DESIGN - MOBILE
+========================================= */
+
+@media screen and (max-width: 480px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    .container {
+        padding: 20px 10px;
+    }
+
+    .boxcontainer {
+        width: 100%;
+
+        height: 380px;
+
+        border-radius: 18px;
+    }
+
+    .text-happybirthday {
+        top: 75px;
+    }
+
+    .text-happybirthday img {
+        width: 85%;
+    }
+
+    .balloon-item1 {
+        width: 50px;
+
+        top: 110px;
+    }
+
+    .cloud {
+        width: 65px;
+
+        top: 190px;
+    }
+
+    .cloud:nth-child(1) {
+        left: 25px;
+    }
+
+    .cloud:nth-child(2) {
+        right: 25px;
+    }
+
+    .firework {
+        width: 45px;
+    }
+
+    .firework:nth-child(1) {
+        top: 105px;
+        left: 75px;
+    }
+
+    .firework:nth-child(2) {
+        top: 105px;
+        right: 75px;
+    }
+
+    .cake {
+        width: 120px;
+        height: 120px;
+
+        bottom: 45px;
+    }
+
+    .box-giftbox {
+        padding: 0 5px;
+    }
+
+    .box-giftbox img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .cute1,
+    .cute2 {
+        width: 65px;
+    }
+
+    .mail {
+        width: 55px;
+        height: 55px;
+
+        font-size: 23px;
+
+        bottom: 15px;
+    }
+
+    /* Letter Mobile Layout */
+
+    .boxMail {
+        padding: 12px;
+    }
+
+    .boxMail-container {
+        width: 100%;
+
+        height: 80vh;
+        max-height: 550px;
+
+        flex-direction: column;
+    }
+
+    .card1 {
+        width: 100%;
+        height: 35%;
+
+        flex-direction: row;
+
+        justify-content: space-around;
+
+        border-radius: 15px 15px 0 0;
+
+        padding: 12px;
+    }
+
+    .card1 h3 {
+        font-size: 25px;
+
+        margin: 0;
+    }
+
+    .userImg {
+        width: 85px;
+        height: 85px;
+    }
+
+    .imageCute {
+        width: 60px;
+
+        margin: 0;
+    }
+
+    .card2 {
+        width: 100%;
+        height: 65%;
+
+        border-left: 3px solid white;
+
+        border-radius: 0 0 15px 15px;
+    }
+
+    .card2-content {
+        padding: 20px 17px;
+    }
+
+    .card2-content h3 {
+        font-size: 27px;
+
+        margin-bottom: 15px;
+    }
+
+    .card2-content h2 {
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+    .imageCute2 {
+        width: 65px;
+    }
+
+    .close-letter {
+        width: 38px;
+        height: 38px;
+
+        top: 10px;
+        right: 10px;
+
+        font-size: 19px;
+    }
+
+    /* Final Surprise */
+
+    .surprise-content h1 {
+        font-size: 43px;
+    }
+
+    .surprise-content p {
+        font-size: 16px;
+    }
+
+    #copy p {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================
+   25. REDUCED MOTION SUPPORT
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+/* =========================================
+   PREMIUM MUSIC CONTROL
+========================================= */
+
+.music-control {
+    position: fixed;
+
+    top: 25px;
+    right: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #ff8fba,
+        #ff4f91
+    );
+
+    color: white;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    z-index: 500;
+
+    box-shadow:
+        0 5px 20px rgba(255, 79, 145, 0.25);
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.music-control:hover {
+    background: linear-gradient(
+        135deg,
+        #ff6fa7,
+        #f93682
+    );
+
+    box-shadow:
+        0 8px 25px rgba(255, 79, 145, 0.4);
+}
+
+.music-control.playing {
+    animation: musicPulse 2s ease-in-out infinite;
+}
+
+@keyframes musicPulse {
+    0%, 100% {
+        box-shadow: 0 5px 20px rgba(255, 79, 145, 0.25);
+    }
+
+    50% {
+        box-shadow: 0 5px 28px rgba(255, 79, 145, 0.6);
+    }
+}
+
+@media (max-width: 480px) {
+    .music-control {
+        top: 15px;
+        right: 15px;
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 16px;
+    }
+}
+
+/* =========================================
+   LETTER CLOSE BUTTON - FIX
+========================================= */
+
+#closeLetter {
+    position: fixed !important;
+
+    top: 25px !important;
+    right: 25px !important;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+    background: #ffffff !important;
+    color: #ff3f88 !important;
+
+    border: 2px solid #ffb6d5 !important;
+    border-radius: 50%;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    z-index: 99999 !important;
+
+    box-shadow: 0 5px 20px rgba(255, 79, 145, 0.25);
+
+    transition: 0.3s ease;
+}
+
+#closeLetter:hover {
+    background: #ff4f91 !important;
+    color: white !important;
+
+    transform: rotate(90deg);
+}
+
+@media (max-width: 600px) {
+    #closeLetter {
+        top: 12px !important;
+        right: 12px !important;
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 21px;
+    }
+}
+
+/* LETTER CLOSE BUTTON - VISIBILITY FIX */
+/* FINAL LETTER CLOSE BUTTON POSITION FIX */
+
+#letterOverlay {
+    position: fixed !important;
+    inset: 0;
+    z-index: 10000 !important;
+}
+
+#letterOverlay #closeLetter {
+    position: fixed !important;
+
+    top: 25px !important;
+    right: 25px !important;
+
+    width: 48px !important;
+    height: 48px !important;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff !important;
+    color: #ff3f88 !important;
+
+    border: 2px solid #ffb6d5 !important;
+    border-radius: 50% !important;
+
+    font-size: 25px !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    z-index: 10001 !important;
+
+    cursor: pointer;
+}
+
+.music-control {
+    z-index: 500 !important;
+}
+#letterOverlay #closeLetter:hover {
+    background: #ff4f91 !important;
+    color: white !important;
+}
+.music-control {
+    z-index: 500;
+}
+
+#letterOverlay #closeLetter {
+    z-index: 10010 !important;
+}
+
+/* =========================================
+   LETTER CLOSE BUTTON - FINAL FIX
+========================================= */
+
+/* FINAL LETTER CLOSE BUTTON POSITION FIX */
+
+#letterOverlay {
+    position: fixed !important;
+    inset: 0;
+    z-index: 10000 !important;
+}
+
+#letterOverlay #closeLetter {
+    position: fixed !important;
+
+    top: 25px !important;
+    right: 25px !important;
+
+    width: 48px !important;
+    height: 48px !important;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff !important;
+    color: #ff3f88 !important;
+
+    border: 2px solid #ffb6d5 !important;
+    border-radius: 50% !important;
+
+    font-size: 25px !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    z-index: 10001 !important;
+
+    cursor: pointer;
+}
+
+.music-control {
+    z-index: 500 !important;
+}
+
+#letterOverlay #closeLetter:hover {
+    background: #ff4f91 !important;
+    color: #ffffff !important;
+
+    transform: rotate(90deg);
+}
+
+#letterOverlay #closeLetter i {
+    display: block;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+
+    #letterOverlay #closeLetter {
+        top: 12px !important;
+        right: 12px !important;
+
+        width: 42px !important;
+        height: 42px !important;
+
+        font-size: 21px !important;
+    }
+}
+
+/* FINAL LETTER CLOSE BUTTON POSITION FIX */
+
+#letterOverlay {
+    position: fixed !important;
+    inset: 0;
+    z-index: 10000 !important;
+}
+
+#letterOverlay #closeLetter {
+    position: fixed !important;
+
+    top: 25px !important;
+    right: 25px !important;
+
+    width: 48px !important;
+    height: 48px !important;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff !important;
+    color: #ff3f88 !important;
+
+    border: 2px solid #ffb6d5 !important;
+    border-radius: 50% !important;
+
+    font-size: 25px !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    z-index: 10001 !important;
+
+    cursor: pointer;
+}
+
+.music-control {
+    z-index: 500 !important;
+}
+
+/* LETTER CLOSE BUTTON - SEPARATE POSITION */
+
+#letterOverlay #closeLetter {
+    position: fixed !important;
+
+    top: 90px !important;
+    right: 25px !important;
+
+    width: 48px !important;
+    height: 48px !important;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff !important;
+    color: #ff3f88 !important;
+
+    border: 2px solid #ffb6d5 !important;
+    border-radius: 50% !important;
+
+    font-size: 25px !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    z-index: 10001 !important;
+
+    cursor: pointer;
+}
+
+.music-control {
+    top: 25px !important;
+    right: 25px !important;
+    z-index: 500 !important;
+}
+
+/* =========================================
+   BIRTHDAY INTERACTIVE INSTRUCTIONS
+========================================= */
+
+.birthday-instruction {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 5px;
+
+    z-index: 20;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    animation: instructionAppear 3s ease-in-out infinite;
+}
+
+#cakeInstruction {
+    bottom: 185px;
+}
+
+#letterInstruction {
+    bottom: 100px;
+    display: none;
+}
+
+.birthday-instruction span {
+    padding: 8px 17px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 1px solid #ff9fc5;
+
+    border-radius: 30px;
+
+    color: #e93679;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    box-shadow: 0 4px 15px rgba(255, 79, 145, 0.2);
+}
+
+.instruction-arrow {
+    color: #ff4f91;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    animation: arrowPoint 0.8s ease-in-out infinite;
+}
+
+@keyframes instructionAppear {
+    0%, 100% {
+        opacity: 0;
+    }
+
+    20%, 80% {
+        opacity: 1;
+    }
+}
+
+@keyframes arrowPoint {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(9px);
+    }
+}

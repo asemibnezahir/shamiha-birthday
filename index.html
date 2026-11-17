@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#ffb6d5">
+    <meta name="author" content="Birthday Surprise">
+    <meta name="description" content="A special birthday surprise made with love for Shamiha.">
+
+    <title>Happy Birthday Shamiha ❤️</title>
+
+    <!-- Website Icon -->
+    <link rel="icon" type="image/png" href="./assets/images/heart.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="./js/main.js" defer></script>
+    <script src="./js/letter.js" defer></script>
+    <script src="./js/surprise.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- =================================
+         MAIN BIRTHDAY CONTAINER
+    ================================== -->
+
+    <main class="container">
+
+        <!-- =================================
+             BIRTHDAY CARD
+        ================================== -->
+
+        <section class="boxcontainer" id="birthdayCard">
+
+            <!-- Top Birthday Banner -->
+            <div class="image">
+                <img src="./assets/images/flag.png" alt="Colorful birthday banner">
+            </div>
+
+
+            <!-- Birthday Heading -->
+            <div class="text-happybirthday">
+                <img src="./assets/images/texthappy.png" alt="Happy Birthday">
+            </div>
+
+
+            <!-- Floating Balloons -->
+            <div class="box-balloon">
+
+                <div class="balloon-item1">
+                    <img src="./assets/images/balloon.png" alt="Birthday balloon">
+                </div>
+
+                <div class="balloon-item1">
+                    <img src="./assets/images/balloon.png" alt="Birthday balloon">
+                </div>
+
+            </div>
+
+
+            <!-- Floating Clouds -->
+            <div class="box-cloud">
+
+                <div class="cloud">
+                    <img src="./assets/images/cloud.png" alt="Cloud decoration">
+                </div>
+
+                <div class="cloud">
+                    <img src="./assets/images/cloud.png" alt="Cloud decoration">
+                </div>
+
+            </div>
+
+
+            <!-- Fireworks -->
+            <div class="box-firework">
+
+                <div class="firework">
+                    <img src="./assets/images/firework.png" alt="Firework decoration">
+                    <img src="./assets/images/firework1.png" alt="Firework effect">
+                </div>
+
+                <div class="firework">
+                    <img src="./assets/images/firework.png" alt="Firework decoration">
+                    <img src="./assets/images/firework1.png" alt="Firework effect">
+                </div>
+
+            </div>
+
+
+            <!-- Paper Cannon -->
+            <div class="paperCannons">
+                <img src="./assets/images/paperCannons.png" alt="Birthday confetti">
+            </div>
+
+
+            <!-- Gift Boxes -->
+            <div class="box-giftbox">
+
+                <img src="./assets/images/giftbox.png" alt="Gift box">
+                <img src="./assets/images/giftbox.png" alt="Gift box">
+                <img src="./assets/images/giftbox.png" alt="Gift box">
+                <img src="./assets/images/giftbox.png" alt="Gift box">
+                <img src="./assets/images/giftbox.png" alt="Gift box">
+                <img src="./assets/images/giftbox.png" alt="Gift box">
+
+            </div>
+
+
+            <!-- Cute Characters -->
+            <div class="boxcute">
+
+                <div class="cute1">
+                    <img src="./assets/images/cute.png" alt="Cute birthday character">
+                </div>
+
+                <div class="cute2">
+                    <img src="./assets/images/cute.png" alt="Cute birthday character">
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 ENVELOPE BUTTON
+            ================================== -->
+
+            <button class="mail"
+                id="openLetter"
+                type="button"
+                aria-label="Open birthday letter">
+
+                <i class="fa-regular fa-envelope"></i>
+
+            </button>
+
+            <!-- Birthday Instructions -->
+
+<div class="birthday-instruction" id="cakeInstruction">
+    <span>🎂 Cut the Cake!</span>
+    <div class="instruction-arrow">↓</div>
+</div>
+
+<div class="birthday-instruction" id="letterInstruction">
+    <span>💌 Open Your Birthday Letter!</span>
+    <div class="instruction-arrow">↓</div>
+</div>
+
+
+            <!-- Birthday Cake -->
+            <button class="cake"
+                id="birthdayCake"
+                type="button"
+                aria-label="Click the birthday cake for a surprise">
+
+                <img src="./assets/images/cake.png" alt="Birthday cake">
+
+            </button>
+
+
+        </section>
+
+
+        <!-- =================================
+             BIRTHDAY LETTER OVERLAY
+        ================================== -->
+
+        <section class="boxMail"
+            id="letterOverlay"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Birthday letter for Shamiha"
+            aria-hidden="true">
+
+
+            <!-- Close Button -->
+            <button class="close-letter"
+                id="closeLetter"
+                type="button"
+                aria-label="Close birthday letter">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <!-- Letter Container -->
+            <div class="boxMail-container">
+
+
+                <!-- =================================
+                     LEFT SIDE: LETTER COVER
+                ================================== -->
+
+                <div class="card1">
+
+                    <div class="userImg">
+    <img
+        src="./assets/images/couple.jpeg"
+        alt="Gihan and Shamiha"
+    >
+</div>
+
+                    <h3>Happy Birthday</h3>
+
+                    <div class="imageCute">
+
+                        <img src="./assets/images/cute2.png"
+                            alt="Cute birthday illustration">
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     RIGHT SIDE: LETTER CONTENT
+                ================================== -->
+
+                <div class="card2">
+
+                    <div class="card2-content">
+
+                        <h3>To My Shamiha ❤️</h3>
+
+
+                        <!-- Personalized Birthday Message -->
+
+                        <h2 id="letterText">
+                        </h2>
+
+
+                        <!-- Letter Decoration -->
+                        <div class="imageCute2">
+
+                            <img src="./assets/images/cute2.png"
+                                alt="Birthday decoration">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             FINAL BIRTHDAY SURPRISE
+        ================================== -->
+
+        <section class="birthday-surprise"
+            id="birthdaySurprise"
+            aria-hidden="true">
+
+            <div class="surprise-content">
+
+                <h1>
+                    Happy Birthday
+                    <span>My Shamiha ❤️</span>
+                </h1>
+
+                <p>
+                    শুভ জন্মদিন, আমার বউ! 😘😘😘
+                    <br>
+                    Wishing you endless happiness and love. 😍😍
+                </p>
+                <div class="surprise-heart-row" aria-hidden="true">
+    <span>💕</span>
+    <span>❤️</span>
+    <span>💗</span>
+    <span>💕</span>
+    <span>❤️</span>
+    <span>💗</span>
+    <span>💕</span>
+    <span>❤️</span>
+    <span>💗</span>
+    <span>💕</span>
+    <span>❤️</span>
+    <span>💗</span>
+</div>
+                <div class="surprise-heart">
+                    <img src="./assets/images/heart.png" alt="Love">
+                </div>
+
+                <button id="closeSurprise" type="button">
+                    <i class="fa-solid fa-heart"></i>
+                    Back to My Surprise
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =================================
+         FOOTER
+    ================================== -->
+
+    <footer id="copy">
+
+        <p>
+            Made
+            <i class="fa-solid fa-heart"></i>
+            for Asem er BOU 
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
